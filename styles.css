@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
+.stApp {
+    background-color: #b2b2be71 !important;
+    color: #b2b2be71 !important;
+}
+
+* {
+    font-family: 'Raleway';
+    color: #cbfce7 !important;
+}
+
+hr {
+    border: none;
+    height: 100px;
+    background-color: #d31212; /* or use #333 for dark lines */
+    margin: 2em 0;
+}
