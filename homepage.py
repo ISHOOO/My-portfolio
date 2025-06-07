@@ -369,7 +369,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 6: Supermarket sales Analysis]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets/supermarket.jpg")
+        st.image("assets\supermarket.JPG")
         st.link_button("Source Code", "https://github.com/ISHOOO/Supermarket-sales-analysis")
     with desc:
         st.write("""
