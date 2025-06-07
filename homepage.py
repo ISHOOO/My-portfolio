@@ -34,7 +34,7 @@ selection = option_menu(
 
 with st.sidebar:
     # Profile pic
-    pfp=jpg_to_base64("assets/pfp.jpg")
+    pfp=jpg_to_base64("assets/pfp.JPG")
     st.markdown(f"""
     <img src="data:image/jpeg;base64,{pfp}" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; border: 15px solid #b2b2be71;">
     """,
