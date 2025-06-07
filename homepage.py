@@ -354,7 +354,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 5: Tesla stock price EDA and Forecasting]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets/tesla.jpg")
+        st.image("assets/Tesla.JPG")
         st.link_button("Source code", "https://github.com/ISHOOO/Tesla-stock-price-EDA-and-forecasting)")
     with desc:
         st.write("""
