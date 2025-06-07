@@ -43,7 +43,7 @@ with st.sidebar:
 
     st.title("Contact Me:")
     telegram=st.columns([1,4])
-    with telegram[0]:st.image("assets\\telegram.png")
+    with telegram[0]:st.image("assets/telegram.png")
     with telegram[1]:st.write("[@insightful_ishu](https://t.me/insightful_ishu)") 
 
     discord=st.columns([1,4])
