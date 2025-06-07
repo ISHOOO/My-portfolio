@@ -68,53 +68,53 @@ with st.sidebar:
 if selection=="Skills":
     st.header(" :red-background[TECHNICAL SKILLS]")
     tools1= st.columns(5)
-    with tools1[0]: st.image("assets\\python.png", width=100, caption="Python")
+    with tools1[0]: st.image("assets/python.png", width=100, caption="Python")
     with tools1[1]: 
-        img= Image.open("assets\\mysql.png")
+        img= Image.open("assets/mysql.png")
         image=img.crop((55,10,245,180)) #left, up, right, low
         st.image(image, width=100, caption= "MySQL")
-    with tools1[2]: st.image("assets\\numpy.png", width=100, caption= "Numpy")
-    with tools1[3]: st.image("assets\\pandas.png", width=100, caption="Pandas")
-    with tools1[4]: st.image("assets\\matplotlib.png", width=100, caption="Matplotlib")
+    with tools1[2]: st.image("assets/numpy.png", width=100, caption= "Numpy")
+    with tools1[3]: st.image("assets/pandas.png", width=100, caption="Pandas")
+    with tools1[4]: st.image("assets/matplotlib.png", width=100, caption="Matplotlib")
 
     tools2= st.columns(5)
-    with tools2[0]: st.image("assets\\seaborn.png",width=100, caption="Seaborn")
-    with tools2[1]: st.image("assets\\sklearn.png", width=100, caption="Scikit-Learn")
-    with tools2[2]: st.image("assets\\tensorflow.png", width=100, caption="Tensorflow")
-    with tools2[3]: st.image("assets\\git.png", width=100, caption="Git")
-    with tools2[4]: st.image("assets\\excel.jpg", width=100, caption="Excel")
+    with tools2[0]: st.image("assets/seaborn.png",width=100, caption="Seaborn")
+    with tools2[1]: st.image("assets/sklearn.png", width=100, caption="Scikit-Learn")
+    with tools2[2]: st.image("assets/tensorflow.png", width=100, caption="Tensorflow")
+    with tools2[3]: st.image("assets/git.png", width=100, caption="Git")
+    with tools2[4]: st.image("assets/excel.jpg", width=100, caption="Excel")
     
     "---"
 
     st.header(":red-background[SPECIAL SKILLS]")
 
     spec1=st.columns(4)
-    with spec1[0]: st.image("assets\\data wrangling.png", width=100, caption="Data Wrangling")
-    with spec1[1]: st.image("assets\\eda.png", width=100, caption="Exploratory Data Analysis")
-    with spec1[2]: st.image("assets\\dbms.png", width=100, caption="Database Management")
-    with spec1[3]: st.image("assets\\kpi.png", width=100, caption="KPIs and Metrics")
+    with spec1[0]: st.image("assets/data wrangling.png", width=100, caption="Data Wrangling")
+    with spec1[1]: st.image("assets/eda.png", width=100, caption="Exploratory Data Analysis")
+    with spec1[2]: st.image("assets/dbms.png", width=100, caption="Database Management")
+    with spec1[3]: st.image("assets/kpi.png", width=100, caption="KPIs and Metrics")
 
     spec2=st.columns(4)
-    with spec2[0]: st.image("assets\\data_viz.png", width=100, caption="Data visualisation")
-    with spec2[1]: st.image("assets\\ML.png", width=100, caption="Machine Learning")
+    with spec2[0]: st.image("assets/data_viz.png", width=100, caption="Data visualisation")
+    with spec2[1]: st.image("assets/ML.png", width=100, caption="Machine Learning")
     with spec2[2]: 
-        img= Image.open("assets\\AB_testing.png")
+        img= Image.open("assets/AB_testing.png")
         image=img.crop((90,0,250,220))
         st.image(image, width=80, caption="A/B Testing")
-    with spec2[3]: st.image("assets\\time_series.png", width=100, caption="Time Series Analysis")
+    with spec2[3]: st.image("assets/time_series.png", width=100, caption="Time Series Analysis")
 
     "---"
 
     st.header(":red-background[SOFT SKILLS]")
     soft= st.columns(6)
     with soft[0]: 
-        st.image("assets\\solution oriented.png", width=80)
+        st.image("assets/solution oriented.png", width=80)
         st.caption("Solution oriented thinking")
-    with soft[1]: st.image("assets\\presentation.png", width=110 ,caption="Presentation skills")
-    with soft[2]: st.image("assets\\adaptability.png", width=100, caption="Adaptability")
-    with soft[3]: st.image("assets\\critical.png", width=100, caption="Critical thinking")
-    with soft[4]: st.image("assets\\collab.png", width=100, caption="Collaboration" )
-    with soft[5]: st.image("assets\\second_order_thinking.png", width=100, caption="Second Order Thinking")
+    with soft[1]: st.image("assets/presentation.png", width=110 ,caption="Presentation skills")
+    with soft[2]: st.image("assets/adaptability.png", width=100, caption="Adaptability")
+    with soft[3]: st.image("assets/critical.png", width=100, caption="Critical thinking")
+    with soft[4]: st.image("assets/collab.png", width=100, caption="Collaboration" )
+    with soft[5]: st.image("assets/second_order_thinking.png", width=100, caption="Second Order Thinking")
     "---"
 
 #------------------------------------Educations and Certifications---------------------------------------------------#
@@ -192,20 +192,20 @@ if selection=="Education and Certifications":
     github, linkedin, x, telegram =st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large")
     with github[0] :
         st.markdown("#### Introduction to Machine Learning, IIT Kharagpur")
-        img = Image.open("assets\\NPTELML.jfif")
+        img = Image.open("assets/NPTELML.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by NPTEL upon successful clearance of an exam")
     with github[1] :
         st.markdown("#### SQL(Advanced), HackerRank")
-        img = Image.open("assets\\SQLadvanced.jfif")
+        img = Image.open("assets/SQLadvanced.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
 
     with linkedin[0]:
         st.markdown("#### Python(Basic), HackerRank")
-        img = Image.open("assets\Pythonbasic.jfif")
+        img = Image.open("assets/Pythonbasic.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by hacker rank upon successful clearance of an online exam")
     with linkedin[1]:
         st.markdown("#### SQL(Intermediate), HackerRank")
-        img = Image.open("assets\\SQLintermediate.jfif")
+        img = Image.open("assets/SQLintermediate.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
     
     with x[0]:
@@ -214,12 +214,12 @@ if selection=="Education and Certifications":
         st.image(img.resize((400, 300)), use_container_width=True, caption="Silver medal and certificate of accomplishment issued by Science Olympiad Foundation upon successful clearance of an exam")
     with x[1]:
         st.markdown("#### SQL(Basic), HackerRank")
-        img=Image.open("assets\\SQLbeginner.jfif")
+        img=Image.open("assets/SQLbeginner.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
         
     with telegram[0]: 
         st.markdown("#### International Maths Olympiad, SOF")
-        img=Image.open("assets\\IMO.jpeg")
+        img=Image.open("assets/IMO.jpeg")
         st.image(img.rotate(90).resize((400,300)), use_container_width=True, caption= "certificate of participation issued by Science Olympiad Foundation upon successful clearance of an exam")
     
 #------------------------------Experience and Achievements---------------------------------------------#
@@ -240,7 +240,7 @@ if selection == "Experience and Achievements":
     st.subheader("Data Science Intern — ICT Academy (Aug 2023 – Oct 2023)")
     ictintern=st.columns([1.75,5])
     with ictintern[0]:
-        st.image("assets\ictintern.JPG")
+        st.image("assets/ictintern.JPG")
     with ictintern[1]:    
         st.markdown("""
         - Completed a Data Science virtual internship using Open Weaver Studio.
@@ -302,7 +302,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 2: Smart Attendance Management App]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets\\attendance_mgmt.png")
+        st.image("assets/attendance_mgmt.png")
         st.link_button("Source Code", "https://github.com/ISHOOO/Smart-Attendance-App")
     with desc:
         st.write("""
@@ -317,7 +317,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 3: Financial Fraud Detection]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets\\fraud_detection.png")
+        st.image("assets/fraud_detection.png")
         st.link_button("Source Code", "")
     with desc:
         st.write("""
@@ -334,7 +334,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 4: Automobile sales Dashboard]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets\\automobile sales dashboard.JPG")
+        st.image("assets/automobile sales dashboard.JPG")
         with open("bike dataset.xlsx", "rb") as f:
             bytes_data = f.read()
         st.download_button("Download Excel file", bytes_data, file_name="Automobile_Dashboard_project_Anant_Gupta.xlsx")
@@ -369,7 +369,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 6: Supermarket sales Analysis]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets\\supermarket.jpg")
+        st.image("assets/supermarket.jpg")
         st.link_button("Source Code", "https://github.com/ISHOOO/Supermarket-sales-analysis")
     with desc:
         st.write("""
@@ -388,7 +388,7 @@ if selection=="Projects":
     st.header(":orange-background[Project 7: Social Media Recommendation Engine]")
     code,desc=st.columns([1,3])
     with code:
-        st.image("assets\\artsper.jfif")
+        st.image("assets/artsper.jfif")
         st.link_button("Source Code", "https://github.com/ISHOOO/Social-Media-FYP")
     with desc:
         st.write("""
