@@ -67,7 +67,7 @@ with st.sidebar:
 
 if selection=="Skills":
     st.header(" :red-background[TECHNICAL SKILLS]")
-    tools1= st.columns(5)
+    tools1= st.columns(6)
     with tools1[0]: st.image("assets/python.png", width=100, caption="Python")
     with tools1[1]: 
         img= Image.open("assets/mysql.png")
@@ -76,6 +76,7 @@ if selection=="Skills":
     with tools1[2]: st.image("assets/numpy.png", width=100, caption= "Numpy")
     with tools1[3]: st.image("assets/pandas.png", width=100, caption="Pandas")
     with tools1[4]: st.image("assets/matplotlib.png", width=100, caption="Matplotlib")
+    with tools1[5]: st.image("assets/tableau.png", width=100, caption="Tableau")
 
     tools2= st.columns(5)
     with tools2[0]: st.image("assets/seaborn.png",width=100, caption="Seaborn")
@@ -398,3 +399,16 @@ if selection=="Projects":
                 - Developed collaboratively using Python and MERN stack in Javascript.
             """)
 
+    st.header(":orange-background[Project 8: Tableau Seattle Airbnb Dashboard]")
+    code,desc=st.columns([1,3])
+    with code:
+        st.image("assets/seattle airbnb dashboard.JPG")
+        st.link_button("Live dashboard Link", "https://public.tableau.com/app/profile/ishan.gupta7148/viz/Seattleairbnbdataviz/Dashboard1")
+    with desc:
+        st.write("""
+                This is an insightful and interactive dashboard made to visualise the Seattle Airbnb dataset to answer a real-world business question:
+                > "Where should I invest in Seattle to start a profitable Airbnb business?" 
+                - It was made using `Tableau 2025.1`
+                - Helps identify the most profitable neighborhoods and factors influencing listing success for an Airbnb business in Seattle.
+                - Uses graphical visuals such as Bar graph, Line plots and mapbox. 
+            """)
