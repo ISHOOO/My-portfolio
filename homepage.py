@@ -67,23 +67,24 @@ with st.sidebar:
 
 if selection=="Skills":
     st.header(" :red-background[TECHNICAL SKILLS]")
-    tools1= st.columns(6)
+    tools1= st.columns(5)
     with tools1[0]: st.image("assets/python.png", width=100, caption="Python")
     with tools1[1]: 
         img= Image.open("assets/mysql.png")
         image=img.crop((55,10,245,180)) #left, up, right, low
         st.image(image, width=100, caption= "MySQL")
-    with tools1[2]: st.image("assets/numpy.png", width=100, caption= "Numpy")
-    with tools1[3]: st.image("assets/pandas.png", width=100, caption="Pandas")
-    with tools1[4]: st.image("assets/matplotlib.png", width=100, caption="Matplotlib")
-    with tools1[5]: st.image("assets/tableau.png", width=100, caption="Tableau")
+    with tools1[2]: st.image("assets/tableau.png", width=100, caption="Tableau")
+    with tools1[3]: st.image("assets/excel.jpg", width=100, caption="Excel") 
+    with tools1[4]: st.image("assets/git.png", width=100, caption="Git")
 
     tools2= st.columns(5)
-    with tools2[0]: st.image("assets/seaborn.png",width=100, caption="Seaborn")
-    with tools2[1]: st.image("assets/sklearn.png", width=100, caption="Scikit-Learn")
-    with tools2[2]: st.image("assets/tensorflow.png", width=100, caption="Tensorflow")
-    with tools2[3]: st.image("assets/git.png", width=100, caption="Git")
-    with tools2[4]: st.image("assets/excel.jpg", width=100, caption="Excel")
+    with tools2[0]: st.image("assets/numpy.png", width=100, caption= "Numpy")
+    with tools2[1]: st.image("assets/pandas.png", width=100, caption="Pandas")
+    with tools2[2]: st.image("assets/matplotlib.png", width=100, caption="Matplotlib")
+    with tools2[3]: st.image("assets/seaborn.png",width=100, caption="Seaborn")     
+    with tools2[4]: st.image("assets/sklearn.png", width=100, caption="Scikit-Learn")
+
+    st.image("assets/tensorflow.png", width=100, caption="Tensorflow")
     
     "---"
 
