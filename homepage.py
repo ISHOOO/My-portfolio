@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image
+from PIL import Image, ImageEnhance
 from base64 import b64encode
 from io import BytesIO
 from streamlit_option_menu import option_menu
@@ -27,7 +27,7 @@ st.download_button(label="Click to Download Resume", data=pdf_data, file_name="A
 
 selection = option_menu(
     menu_title=None, 
-    options=["Skills", "Education and Certifications", "Experience and Achievements", "Projects"],
+    options=["Skills", "Education", "Experience", "Projects"],
     icons=["gear", "book", "briefcase", "code"],
     orientation="horizontal"
     )
@@ -51,7 +51,7 @@ with st.sidebar:
     with discord[1]:st.write("[@theinsightfinder](https://discord.com/users/1312679030025097269)") 
 
     github=st.columns([1,4])
-    with github[0]:st.markdown("![](https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-512.png)")
+    with github[0]: st.image("assets/github.png", use_container_width=True)
     with github[1]:st.write("[@ISHOOO](https://github.com/ISHOOO)")     
     
     linkedin=st.columns([1,4])
@@ -59,60 +59,52 @@ with st.sidebar:
     with linkedin[1]:st.write("[@anantg789](https://www.linkedin.com/in/anantg789)") 
 
     x=st.columns([1,4])
-    with x[0]: st.markdown("![](https://img.icons8.com/ios7/600/FFFFFF/twitterx--v2.png)")
-    with x[1]: st.write("[@Gupta_8Anant](https://x.com/Gupta_8Anant)") 
-                                
+    with x[0]: st.image("assets/twitterX.png",  use_container_width=True)
+    with x[1]: st.write("[@Gupta_8Anant](https://x.com/Gupta_8Anant)")                                 
 
 #---------------------------------------------Skills------------------------------------------------------------#
 
 if selection=="Skills":
     st.header(" :red-background[TECHNICAL SKILLS]")
-    tools1= st.columns(5)
-    with tools1[0]: st.image("assets/python.png", width=100, caption="Python")
-    with tools1[1]: 
-        img= Image.open("assets/mysql.png")
-        image=img.crop((55,10,245,180)) #left, up, right, low
-        st.image(image, width=100, caption= "MySQL")
-    with tools1[2]: st.image("assets/tableau.png", width=100, caption="Tableau")
-    with tools1[3]: st.image("assets/excel.jpg", width=100, caption="Excel") 
-    with tools1[4]: st.image("assets/git.png", width=100, caption="Git")
+    tools1= st.columns(5,gap="large")
+    with tools1[0]: st.image("assets/python.png", use_container_width=True, caption="Python")
+    with tools1[1]: st.image("assets/mysql.png", use_container_width=True,  caption= "MySQL")
+    with tools1[2]: st.image("assets/tableau.png", use_container_width=True,caption="Tableau")
+    with tools1[3]: st.image("assets/excel.jpg", use_container_width=True, caption="Excel") 
+    with tools1[4]: st.image("assets/git.png", use_container_width=True, caption="Git")
 
-    tools2= st.columns(5)
-    with tools2[0]: st.image("assets/numpy.png", width=100, caption= "Numpy")
-    with tools2[1]: st.image("assets/pandas.png", width=100, caption="Pandas")
-    with tools2[2]: st.image("assets/matplotlib.png", width=100, caption="Matplotlib")
-    with tools2[3]: st.image("assets/seaborn.png",width=100, caption="Seaborn")     
-    with tools2[4]: st.image("assets/sklearn.png", width=100, caption="Scikit-Learn")
+    tools2= st.columns(5,gap="large")
+    with tools2[0]: st.image("assets/numpy.png", use_container_width=True, caption= "Numpy")
+    with tools2[1]: st.image("assets/pandas.png", use_container_width=True, caption="Pandas")
+    with tools2[2]: st.image("assets/matplotlib.png", use_container_width=True, caption="Matplotlib")
+    with tools2[3]: st.image("assets/seaborn.png", use_container_width=True, caption="Seaborn")     
+    with tools2[4]: st.image("assets/sklearn.png", use_container_width=True, caption="Scikit-Learn")
 
-    st.image("assets/tensorflow.png", width=100, caption="Tensorflow")
+    tools3= st.columns(5,gap="large")
+    with tools3[0]: st.image("assets/tensorflow.png", use_container_width=True, caption="Tensorflow")
     
     "---"
 
     st.header(":red-background[SPECIAL SKILLS]")
 
-    spec1=st.columns(4)
-    with spec1[0]: st.image("assets/data wrangling.png", width=100, caption="Data Wrangling")
-    with spec1[1]: st.image("assets/eda.png", width=100, caption="Exploratory Data Analysis")
-    with spec1[2]: st.image("assets/dbms.png", width=100, caption="Database Management")
-    with spec1[3]: st.image("assets/kpi.png", width=100, caption="KPIs and Metrics")
+    spec1=st.columns(4, gap="large")
+    with spec1[0]: st.image("assets/data wrangling.png", use_container_width=True, caption="Data Wrangling")
+    with spec1[1]: st.image("assets/eda.png",  use_container_width=True, caption="Exploratory Data Analysis")
+    with spec1[2]: st.image("assets/dbms.png",  use_container_width=True, caption="Database Management")
+    with spec1[3]: st.image("assets/kpi.png", use_container_width=True, caption="KPIs and Metrics")
 
-    spec2=st.columns(4)
-    with spec2[0]: st.image("assets/data_viz.png", width=100, caption="Data visualisation")
-    with spec2[1]: st.image("assets/ML.png", width=100, caption="Machine Learning")
-    with spec2[2]: 
-        img= Image.open("assets/AB_testing.png")
-        image=img.crop((90,0,250,220))
-        st.image(image, width=80, caption="A/B Testing")
-    with spec2[3]: st.image("assets/time_series.png", width=100, caption="Time Series Analysis")
+    spec2=st.columns(4, gap="large")
+    with spec2[0]: st.image("assets/data_viz.png", use_container_width=True, caption="Data visualisation")
+    with spec2[1]: st.image("assets/ML.png", use_container_width=True, caption="Machine Learning")
+    with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
+    with spec2[3]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
 
     "---"
 
     st.header(":red-background[SOFT SKILLS]")
     soft= st.columns(6)
-    with soft[0]: 
-        st.image("assets/solution oriented.png", width=80)
-        st.caption("Solution oriented thinking")
-    with soft[1]: st.image("assets/presentation.png", width=110 ,caption="Presentation skills")
+    with soft[0]: st.image("assets/solution oriented.png", width=100, caption="Solution oriented")
+    with soft[1]: st.image("assets/presentation.png", caption="Presentation skills")
     with soft[2]: st.image("assets/adaptability.png", width=100, caption="Adaptability")
     with soft[3]: st.image("assets/critical.png", width=100, caption="Critical thinking")
     with soft[4]: st.image("assets/collab.png", width=100, caption="Collaboration" )
@@ -121,7 +113,7 @@ if selection=="Skills":
 
 #------------------------------------Educations and Certifications---------------------------------------------------#
 
-if selection=="Education and Certifications":
+if selection=="Education":
     st.toast("Note: Please click on the images for official websites of the related institutions ")
     st.header(":violet-background[MY EDUCATION]")
     st.subheader("Bachelor of Computer Applications (BCA)")
@@ -191,42 +183,42 @@ if selection=="Education and Certifications":
     "---"
 
     st.header(":violet-background[MY CERTIFICATIONS AND COURSEWORK]")
-    github, linkedin, x, telegram =st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large")
-    with github[0] :
+    cert1, cert2, cert3, cert4 =st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large")
+    with cert1[0] :
         st.markdown("#### Introduction to Machine Learning, IIT Kharagpur")
         img = Image.open("assets/NPTELML.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by NPTEL upon successful clearance of an exam")
-    with github[1] :
+    with cert1[1] :
         st.markdown("#### SQL(Advanced), HackerRank")
         img = Image.open("assets/SQLadvanced.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
 
-    with linkedin[0]:
+    with cert2[0]:
         st.markdown("#### Python(Basic), HackerRank")
         img = Image.open("assets/Pythonbasic.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by hacker rank upon successful clearance of an online exam")
-    with linkedin[1]:
+    with cert2[1]:
         st.markdown("#### SQL(Intermediate), HackerRank")
         img = Image.open("assets/SQLintermediate.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
     
-    with x[0]:
+    with cert3[0]:
         st.markdown("#### Silver medal in International English Olympiad, SOF")
         img = Image.open("assets/IEO_2016.jpeg")
         st.image(img.resize((400, 300)), use_container_width=True, caption="Silver medal and certificate of accomplishment issued by Science Olympiad Foundation upon successful clearance of an exam")
-    with x[1]:
+    with cert3[1]:
         st.markdown("#### SQL(Basic), HackerRank")
         img=Image.open("assets/SQLbeginner.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
         
-    with telegram[0]: 
+    with cert4[0]: 
         st.markdown("#### International Maths Olympiad, SOF")
         img=Image.open("assets/IMO.jpeg")
         st.image(img.rotate(90).resize((400,300)), use_container_width=True, caption= "certificate of participation issued by Science Olympiad Foundation upon successful clearance of an exam")
     
 #------------------------------Experience and Achievements---------------------------------------------#
 
-if selection == "Experience and Achievements":
+if selection == "Experience":
     st.header(":blue-background[📊INTERNSHIPS]")
     st.subheader("Data Science Intern — Tech-A-Intern (Jul 2023 – Aug 2023)")
     taiintern=st.columns([1.75,5])
