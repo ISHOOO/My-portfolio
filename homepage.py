@@ -20,7 +20,7 @@ st.set_page_config(layout="wide", page_title="Portfolio Website")
 with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title(":green-background[ANANT GUPTA]")
-st.write("A Data Science and Analytics enthusiast. Eager to solve real-world business problems by leveraging programming skills for statistical analysis, data visualization. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency ")
+st.write("A Data Science and Analytics enthusiast eager to solve real-world business problems by leveraging programming skills for statistical analysis and data visualization. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency ")
 with open("Anant_Gupta_Data_Analyst_Resume.pdf", "rb") as f: pdf_data = f.read()
 st.download_button(label="Click to Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_analyst_Resume.pdf",mime="application/pdf")   
 
@@ -185,7 +185,7 @@ if selection=="Education":
     st.header(":violet-background[MY CERTIFICATIONS AND COURSEWORK]")
     cert1, cert2, cert3, cert4 =st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large")
     with cert1[0] :
-        st.markdown("#### Introduction to Machine Learning, IIT Kharagpur")
+        st.markdown("##### Introduction to Machine Learning, IIT Kharagpur")
         img = Image.open("assets/NPTELML.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by NPTEL upon successful clearance of an exam")
     with cert1[1] :
@@ -203,7 +203,7 @@ if selection=="Education":
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
     
     with cert3[0]:
-        st.markdown("#### Silver medal in International English Olympiad, SOF")
+        st.markdown("##### Silver medal in International English Olympiad, SOF")
         img = Image.open("assets/IEO_2016.jpeg")
         st.image(img.resize((400, 300)), use_container_width=True, caption="Silver medal and certificate of accomplishment issued by Science Olympiad Foundation upon successful clearance of an exam")
     with cert3[1]:
@@ -248,16 +248,16 @@ if selection == "Experience":
     st.subheader("[Leetcode (click to view profile)](https://leetcode.com/u/ishubest90)")
     st.write(""" 
         - Solved **90+** problems 
-        - Rank: **1,282,170**
+        - Rank: **Top 1 million**
         - Languages used: **MySQL, Pandas, Python**
         """)
     
     hackerrank=st.columns([1,8])
     st.subheader("[HackerRank (click to view profile)](https://www.hackerrank.com/profile/ishuthebest9999)")
     st.write("""
-        - 🟢 Python: **5 stars (32%)**, 37/115 challenges solved.
-        - 🟢 MySQL: **5 stars (79%)**, 46/58 challenges solved.
-        - 🟡 Problem Solving: **4 stars (85%)**, 56.42 points toward Gold badge.
+        - 🟢 Python: **5 stars**, 37/115 challenges solved.
+        - 🟢 MySQL: **5 stars**, 46/58 challenges solved.
+        - 🟡 Problem Solving: **4 stars**, 82% towards Gold badge.
     """)
     "---"
 
@@ -312,7 +312,7 @@ if selection=="Projects":
     code,desc=st.columns([1,3])
     with code:
         st.image("assets/fraud_detection.png")
-        st.link_button("Source Code", "")
+        st.link_button("Source Code", "https://github.com/ISHOOO/Financial-Fraud-Detection")
     with desc:
         st.write("""
             The Financial Fraud Detection project identifies fraudulent transactions using a hybrid model of Random Forests and rule-based heuristics.
@@ -349,10 +349,10 @@ if selection=="Projects":
     code,desc=st.columns([1,3])
     with code:
         st.image("assets/Tesla.JPG")
-        st.link_button("Source code", "https://github.com/ISHOOO/Tesla-stock-price-EDA-and-forecasting)")
+        st.link_button("Source code", "https://github.com/ISHOOO/Tesla-stock-price-EDA-and-forecasting") 
     with desc:
         st.write("""
-            The Tesla Stock Price Prediction and Forecasting project leverages time series modeling to forecast future stock prices for Tesla Inc.
+            The Tesla Stock Price Prediction and Forecasting project leverages **time series modeling** to forecast future stock prices for Tesla Inc.
             - Conducted in-depth Exploratory Data Analysis (EDA) and feature tuning to optimize model performance.
             - Developed a SARIMA (Seasonal AutoRegressive Integrated Moving Average) model to accurately capture trends and seasonality in stock price data.
             - Implemented using Python with libraries including pandas, matplotlib, and statsmodels.
@@ -392,6 +392,8 @@ if selection=="Projects":
                 - Developed collaboratively using Python and MERN stack in Javascript.
             """)
 
+    "---"
+    
     st.header(":orange-background[Project 8: Tableau Seattle Airbnb Dashboard]")
     code,desc=st.columns([1,3])
     with code:
