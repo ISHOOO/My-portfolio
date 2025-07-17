@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image, ImageEnhance
+from PIL import Image
 from base64 import b64encode
 from io import BytesIO
 from streamlit_option_menu import option_menu
@@ -16,11 +16,11 @@ def png_to_base64(path):
     img.save(buffered, format="PNG")
     return b64encode(buffered.getvalue()).decode()
 
-st.set_page_config(layout="wide", page_title="Portfolio Website")
+st.set_page_config(layout="wide", page_title="Portfolio Website", initial_sidebar_state="expanded")
 with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title(":green-background[ANANT GUPTA]")
-st.write("A Data Science and Analytics enthusiast eager to solve real-world business problems by leveraging programming skills for statistical analysis and data visualization. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency ")
+st.write("A Data Science and Analytics enthusiast looking for opportunities to solve real-world business problems by leveraging programming skills for :orange-background[statistical analysis], :orange-background[data visualization] and :orange-background[predictive modelling]. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency ")
 with open("Anant_Gupta_Data_Analyst_Resume.pdf", "rb") as f: pdf_data = f.read()
 st.download_button(label="Click to Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_analyst_Resume.pdf",mime="application/pdf")   
 
@@ -36,7 +36,7 @@ with st.sidebar:
     # Profile pic
     pfp=jpg_to_base64("assets/pfp.JPG")
     st.markdown(f"""
-    <img src="data:image/jpeg;base64,{pfp}" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; border: 15px solid #b2b2be71;">
+    <img src="data:image/jpeg;base64,{pfp}" style="border-radius: 50%; width: 215px; height: 215px; object-fit: cover; border: 15px solid #b2b2be71;">
     """,
     unsafe_allow_html=True,)
 #------------------------------------------------Contact section------------------------------------------------#
@@ -134,7 +134,8 @@ if selection=="Education":
             - 🤝 Participated in seminars, workshops, hackathons and collaborative projects across the 3-year program.
             """
             )
-    st.subheader("Senior Secondary Education (Class 12)")
+    "---"
+    st.subheader("Senior Secondary Education (12th standard)")
     sr_sec=st.columns([1,7])
     with sr_sec[0]:
         st.markdown(f"""
@@ -158,34 +159,12 @@ if selection=="Education":
             """
         )
     
-    st.subheader("Secondary Education (Class 10)")
-    secondary=st.columns([1,7])
-    with secondary[0]:
-        st.markdown(f"""
-        <a href="http://www.jmjdelhi.in" target="_blank">
-            <img src="data:image/jpeg;base64,{png_to_base64("assets/jmjlogo.png")}" width=235" style="cursor:pointer;" />
-        </a>    """, unsafe_allow_html=True)
-        st.markdown(f"""
-        <a href="https://www.cbse.gov.in" target="_blank">
-            <img src="data:image/jpeg;base64,{png_to_base64("assets/cbselogo.png")}" width=235" style="cursor:pointer;" />
-        </a>    """, unsafe_allow_html=True)
-
-    with secondary[1]: st.markdown(
-            """
-            🏫 **Jesus Mary Joseph School**, New Delhi, Delhi, India  
-            📝 **Board:** Central Board of Secondary Education (CBSE)  
-
-            - 📚 Subjects: `Mathematics`, `English`, `Hindi`, `Social Studies`, `General Science`
-            - 🧠 Strengthened fundamental concepts across all core disciplines.
-            - 🏅 Balanced academics with participation in school-level events and competitions.
-            """)
-
     "---"
 
     st.header(":violet-background[MY CERTIFICATIONS AND COURSEWORK]")
     cert1, cert2, cert3, cert4 =st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large"), st.columns(2, gap="large")
     with cert1[0] :
-        st.markdown("##### Introduction to Machine Learning, IIT Kharagpur")
+        st.markdown("#### Introduction to Machine Learning, IIT Kharagpur")
         img = Image.open("assets/NPTELML.jfif")
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by NPTEL upon successful clearance of an exam")
     with cert1[1] :
@@ -203,7 +182,7 @@ if selection=="Education":
         st.image(img.resize((400, 300)), use_container_width=True, caption="certificate of accomplishment issued by HackerRank upon successful clearance of an online exam")
     
     with cert3[0]:
-        st.markdown("##### Silver medal in International English Olympiad, SOF")
+        st.markdown("#### Silver medal in International English Olympiad, SOF")
         img = Image.open("assets/IEO_2016.jpeg")
         st.image(img.resize((400, 300)), use_container_width=True, caption="Silver medal and certificate of accomplishment issued by Science Olympiad Foundation upon successful clearance of an exam")
     with cert3[1]:
@@ -247,7 +226,7 @@ if selection == "Experience":
     st.header(":blue-background[💻 COMPETITIVE PROGRAMMING]")
     st.subheader("[Leetcode (click to view profile)](https://leetcode.com/u/ishubest90)")
     st.write(""" 
-        - Solved **90+** problems 
+        - Solved **100** problems 
         - Rank: **Top 1 million**
         - Languages used: **MySQL, Pandas, Python**
         """)
@@ -270,11 +249,27 @@ if selection == "Experience":
         - Notebooks: Contributor
         - Discussions: Contributor
     """)
+    "---"
 
 #----------------------------------Projects-------------------------------------------------#
 
 if selection=="Projects":
-    st.header(":orange-background[Project 1:  Anidex image classifier]")    
+    st.header(":orange-background[Project 1: Smart Attendance Management App]")
+    code,desc=st.columns([1,3])
+    with code:
+        st.image("assets/attendance_mgmt.png")
+        st.link_button("Source Code", "https://github.com/ISHOOO/Smart-Attendance-App")
+    with desc:
+        st.write("""
+            This application registers and fills student attendance smartly through Face Detection and Recognition.
+            - Use Advanced Computer Vision algorithms such as HAAR Cascade clasifier and LBPH algorithm 
+            - Implemented in collaboration with fellow Tech enthusiasts using python libraries such as open-cv, tkinter, numpy, pandas, pyttsx3 and  pillow
+            - Automates `76%` of human effort
+            """)
+
+    "---"
+        
+    st.header(":orange-background[Project 2: Anidex: Animal image classifier]")    
     code,desc=st.columns([1,3])
     with code:
         st.image("assets/anidexlogo.jpg")
@@ -292,21 +287,6 @@ if selection=="Projects":
         """)
 
     "---"
-
-    st.header(":orange-background[Project 2: Smart Attendance Management App]")
-    code,desc=st.columns([1,3])
-    with code:
-        st.image("assets/attendance_mgmt.png")
-        st.link_button("Source Code", "https://github.com/ISHOOO/Smart-Attendance-App")
-    with desc:
-        st.write("""
-            This application registers and fills student attendance smartly through Face Detection and Recognition.
-            - Use Advanced Computer Vision algorithms such as HAAR Cascade clasifier and LBPH algorithm 
-            - Implemented in collaboration with fellow Tech enthusiasts using python libraries such as open-cv, tkinter, numpy, pandas, pyttsx3 and  pillow
-            - Automates `76%` of human effort
-            """)
-        
-    "---"
         
     st.header(":orange-background[Project 3: Financial Fraud Detection]")
     code,desc=st.columns([1,3])
@@ -319,33 +299,13 @@ if selection=="Projects":
             - Ensemble of 15 decision trees with entropy-based splitting.
             - Rule-driven bias flags transactions exceeding 200,000 units.
             - Key features: transaction amount, payer/receiver type, account balances.
-            - Achieves ~`98%` validation accuracy.
+            - Achieves `~98%` validation accuracy.
             - Built in Python with scikit-learn, pandas, matplotlib, and seaborn.
         """)
 
     "---"    
 
-    st.header(":orange-background[Project 4: Automobile sales Dashboard]")
-    code,desc=st.columns([1,3])
-    with code:
-        st.image("assets/automobile sales dashboard.JPG")
-        with open("bike dataset.xlsx", "rb") as f:
-            bytes_data = f.read()
-        st.download_button("Download Excel file", bytes_data, file_name="Automobile_Dashboard_project_Anant_Gupta.xlsx")
-
-    with desc:
-        st.write("""
-            The Automobile Sales Dashboard provides interactive visual insights into factors influencing automobile purchases.
-            - Built entirely in Microsoft Excel using pivot tables, slicers, and graphical visualizations.
-            - Includes pie charts, line plots, and bar graphs for dynamic data exploration.
-            - Analyzes how age, education, marital status, gender, and region impact purchase behavior.
-            - All data cleaning, transformation, and visualization performed within Excel.
-
-            """)
-
-    "---"
-
-    st.header(":orange-background[Project 5: Tesla stock price EDA and Forecasting]")
+    st.header(":orange-background[Project 4: Tesla stock price EDA and Forecasting]")
     code,desc=st.columns([1,3])
     with code:
         st.image("assets/Tesla.JPG")
@@ -356,11 +316,46 @@ if selection=="Projects":
             - Conducted in-depth Exploratory Data Analysis (EDA) and feature tuning to optimize model performance.
             - Developed a SARIMA (Seasonal AutoRegressive Integrated Moving Average) model to accurately capture trends and seasonality in stock price data.
             - Implemented using Python with libraries including pandas, matplotlib, and statsmodels.
+            - Achieved a Mean Absolute Percentage Error (MAPE) of `0.001`, indicating high forecasting accuracy.
             """)
 
     "---"
 
-    st.header(":orange-background[Project 6: Supermarket sales Analysis]")
+    st.header(":orange-background[Project 5: Exploratory Data Analysis of Layoffs dataset]")
+    code,desc=st.columns([1,3])
+    with code:
+        st.image("assets/tech-layoff-analysis.JPG")
+        st.link_button("Source code", "https://github.com/ISHOOO/layoffs-data-analysis-SQL")
+    with desc:
+        st.write("""
+                This project aims to clean and analyze the Tech Layoffs dataset to uncover trends and insights related to layoffs in the technology sector across the entire globe.
+                - The dataset was cleaned and transformed by removing duplicates, null values and inconsistencies in the values.
+                - The analysis report contained insights such as:
+                    - The top 10 companies with the highest number of layoffs
+                    - Companies which laid off all the employees at once
+                    - The amount of funds raised by the companies through layoffs
+                    - Companies with highest number of layoffs per year. 
+                - The analysis was done using SQL queries in MySQL Workbench.
+            """)
+        
+    "---"
+
+    st.header(":orange-background[Project 6: Social Media Recommendation Engine]")
+    code,desc=st.columns([1,3])
+    with code:
+        st.image("assets/artsper.jfif")
+        st.link_button("Source Code", "https://github.com/ISHOOO/Social-Media-FYP")
+    with desc:
+        st.write("""
+                The Social Media Recommendation System was built for *Artsper*, a social media platform for artists.
+                - Recommends relevant content creators to users based on their interests and engagement patterns.
+                - Enhances content discoverability and user experience on the platform.
+                - Developed collaboratively using Python and MERN stack in Javascript.
+            """)
+
+    "---"
+
+    st.header(":orange-background[Project 7: Supermarket sales Analysis]")
     code,desc=st.columns([1,3])
     with code:
         st.image("assets/supermarket.JPG")
@@ -378,21 +373,6 @@ if selection=="Projects":
                  """)
 
     "---"
-
-    st.header(":orange-background[Project 7: Social Media Recommendation Engine]")
-    code,desc=st.columns([1,3])
-    with code:
-        st.image("assets/artsper.jfif")
-        st.link_button("Source Code", "https://github.com/ISHOOO/Social-Media-FYP")
-    with desc:
-        st.write("""
-                The Social Media Recommendation System was built for *Artsper*, a social media platform for artists.
-                - Recommends relevant content creators to users based on their interests and engagement patterns.
-                - Enhances content discoverability and user experience on the platform.
-                - Developed collaboratively using Python and MERN stack in Javascript.
-            """)
-
-    "---"
     
     st.header(":orange-background[Project 8: Tableau Seattle Airbnb Dashboard]")
     code,desc=st.columns([1,3])
@@ -407,3 +387,24 @@ if selection=="Projects":
                 - Helps identify the most profitable neighborhoods and factors influencing listing success for an Airbnb business in Seattle.
                 - Uses graphical visuals such as Bar graph, Line plots and mapbox. 
             """)
+    
+    "---"
+
+    st.header(":orange-background[Project 9: Automobile sales Dashboard]")
+    code,desc=st.columns([1,3])
+    with code:
+        st.image("assets/automobile sales dashboard.JPG")
+        with open("bike dataset.xlsx", "rb") as f:
+            bytes_data = f.read()
+        st.download_button("Download Excel file", bytes_data, file_name="Automobile_Dashboard_project_Anant_Gupta.xlsx")
+
+    with desc:
+        st.write("""
+            The Automobile Sales Dashboard provides interactive visual insights into factors influencing automobile purchases.
+            - Built entirely in Microsoft Excel using pivot tables, slicers, and graphical visualizations.
+            - Includes pie charts, line plots, and bar graphs for dynamic data exploration.
+            - Analyzes how age, education, marital status, gender, and region impact purchase behavior.
+            - All data cleaning, transformation, and visualization performed within Excel.
+
+            """)
+    "---"
