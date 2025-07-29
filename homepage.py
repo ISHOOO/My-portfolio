@@ -21,8 +21,8 @@ with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_a
 
 st.title(":green-background[ANANT GUPTA]")
 st.write("A Data Science and Analytics enthusiast looking for opportunities to solve real-world business problems by leveraging programming skills for :orange-background[statistical analysis], :orange-background[data visualization] and :orange-background[predictive modelling]. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency ")
-with open("Anant_Gupta_Data_Analyst_Resume.pdf", "rb") as f: pdf_data = f.read()
-st.download_button(label="Click to Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_analyst_Resume.pdf",mime="application/pdf")   
+with open("Data-science-Resume.pdf", "rb") as f: pdf_data = f.read()
+st.download_button(label="Click to Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_Science_Resume.pdf",mime="application/pdf")   
 
 
 selection = option_menu(
