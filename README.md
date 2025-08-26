@@ -21,7 +21,7 @@ I am actively seeking **opportunities in Data Analytics and Data Science** where
 
 📬 **Let’s connect:**  
 - 💼 [LinkedIn](https://www.linkedin.com/in/anantg789)  
-- 📧 anantgupta@example.com  
+- 📧 anantgupta08460#gmail.com  
 
 ---
 
