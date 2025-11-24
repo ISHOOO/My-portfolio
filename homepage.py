@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image
+from PIL import Image, ImageEnhance
 from base64 import b64encode
 from io import BytesIO
 from streamlit_option_menu import option_menu
@@ -21,11 +21,11 @@ with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_a
 
 st.title(":green-background[ANANT GUPTA]")
 st.write("A Data Science and Analytics enthusiast looking for opportunities to solve real-world business problems by leveraging programming skills for :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling]. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency.")
-with open("Anant_Gupta_Data_Analytics_Resume.pdf", "rb") as f: pdf_data = f.read()
+with open("Resume.pdf", "rb") as f: pdf_data = f.read()
 mail, resume, download,_ = st.columns([1.2,2,2.4,5])
 with mail: st.link_button(label="Hire Me", url="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSDZqtfnQDNcgzJhzxKPkChPlKlzcLDQDXNHDCnTxBjcTZBcMfjTcTLvCcRsWSWhPSGZWWpl")
 with resume: st.link_button(label="Preview resume", url="https://drive.google.com/file/d/18ueGxvXJZW0wv8hNYWsttRajy9-FVrKx/view?usp=sharing")
-with download: st.download_button(label="Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_Resume.pdf",mime="application/pdf")   
+with download: st.download_button(label="Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_Analytics_Resume.pdf",mime="application/pdf")   
 
 
 selection = option_menu(
@@ -85,6 +85,7 @@ if selection=="Skills":
 
     tools3= st.columns(5,gap="large")
     with tools3[0]: st.image("assets/tensorflow.png", use_container_width=True, caption="Tensorflow")
+    with tools3[1]: st.image("assets/jupnotebook.png", use_container_width=True, caption="Jupyter Notebook")
     
     "---"
 
@@ -258,7 +259,7 @@ if selection == "Experience":
 
 if selection=="Projects":
     st.header(":orange-background[Project 1: Smart Attendance Management App]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/attendance_mgmt.png")
         st.link_button("Source Code", "https://github.com/ISHOOO/Smart-Attendance-App")
@@ -273,10 +274,10 @@ if selection=="Projects":
     "---"
         
     st.header(":orange-background[Project 2: Anidex: Animal image classifier]")    
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/anidexlogo.jpg")
-        demo, src_code=st.columns([1.2,2])
+        demo, src_code=st.columns([1.28,2.3])
         with demo: st.link_button("Demo", "https://huggingface.co/spaces/goofyishu/Anidex")
         with src_code: st.link_button("Source Code", "https://github.com/ISHOOO/Anidex-Image-Classifier")
     with desc: 
@@ -292,7 +293,7 @@ if selection=="Projects":
     "---"
         
     st.header(":orange-background[Project 3: Financial Fraud Detection]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/fraud_detection.png")
         st.link_button("Source Code", "https://github.com/ISHOOO/Financial-Fraud-Detection")
@@ -309,7 +310,7 @@ if selection=="Projects":
     "---"    
 
     st.header(":orange-background[Project 4: Tesla stock price EDA and Forecasting]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/Tesla.JPG")
         st.link_button("Source code", "https://github.com/ISHOOO/Tesla-stock-price-EDA-and-forecasting") 
@@ -325,7 +326,7 @@ if selection=="Projects":
     "---"
 
     st.header(":orange-background[Project 5: Exploratory Data Analysis of Layoffs dataset]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/tech-layoff-analysis.JPG")
         st.link_button("Source code", "https://github.com/ISHOOO/layoffs-data-analysis-SQL")
@@ -344,7 +345,7 @@ if selection=="Projects":
     "---"
 
     st.header(":orange-background[Project 6: Social Media Recommendation Engine]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/artsper.jfif")
         st.link_button("Source Code", "https://github.com/ISHOOO/Social-Media-FYP")
@@ -359,7 +360,7 @@ if selection=="Projects":
     "---"
 
     st.header(":orange-background[Project 7: Supermarket sales Analysis]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/supermarket.JPG")
         st.link_button("Source Code", "https://github.com/ISHOOO/Supermarket-sales-analysis")
@@ -378,14 +379,14 @@ if selection=="Projects":
     "---"
     
     st.header(":orange-background[Project 8: Tableau Seattle Airbnb Dashboard]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/seattle airbnb dashboard.JPG")
         st.link_button("Live dashboard Link", "https://public.tableau.com/app/profile/ishan.gupta7148/viz/Seattleairbnbdataviz/Dashboard1")
     with desc:
         st.write("""
                 This is an insightful and interactive dashboard made to visualise the Seattle Airbnb dataset to answer a real-world business question:
-                > "Where should I invest in Seattle to start a profitable Airbnb business?" 
+                > :blue-background["Where should I invest in Seattle to start a profitable Airbnb business?"] 
                 - It was made using `Tableau 2025.1`
                 - Helps identify the most profitable neighborhoods and factors influencing listing success for an Airbnb business in Seattle.
                 - Uses graphical visuals such as Bar graph, Line plots and mapbox. 
@@ -394,7 +395,7 @@ if selection=="Projects":
     "---"
 
     st.header(":orange-background[Project 9: Automobile sales Dashboard]")
-    code,desc=st.columns([1,3])
+    code,desc=st.columns([1.1,2.9])
     with code:
         st.image("assets/automobile sales dashboard.JPG")
         with open("bike dataset.xlsx", "rb") as f:
