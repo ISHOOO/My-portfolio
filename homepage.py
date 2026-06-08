@@ -48,9 +48,9 @@ with st.sidebar:
     with telegram[0]:st.image("assets/telegram.png")
     with telegram[1]:st.write("[@insightful_ishu](https://t.me/insightful_ishu)") 
 
-    discord=st.columns([1,4])
-    with discord[0]:st.markdown("![](https://pngimg.com/d/discord_PNG7.png)") 
-    with discord[1]:st.write("[@theinsightfinder](https://discord.com/users/1312679030025097269)") 
+    #discord=st.columns([1,4])
+    #with discord[0]:st.markdown("![]()") 
+    #with discord[1]:st.write("[@theinsightfinder](https://discord.com/users/1312679030025097269)") 
 
     github=st.columns([1,4])
     with github[0]: st.image("assets/github.png", use_container_width=True)
