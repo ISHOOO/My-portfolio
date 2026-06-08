@@ -23,9 +23,8 @@ with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_a
 st.title(":green-background[ANANT GUPTA]")
 st.write("A Data Science and Analytics enthusiast looking for opportunities to solve real-world business problems by leveraging programming skills for :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling]. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency.")
 with open("Resume.pdf", "rb") as f: pdf_data = f.read()
-mail, resume, download,_ = st.columns([1.2,2,2.4,5]) 
+mail, download,_ = st.columns([2,3,6]) 
 with mail: st.link_button(label="Hire Me", url="mailto:anantgupta08460@gmail.com") 
-with resume: st.link_button(label="Preview Resume", url= "https://drive.google.com/file/d/18ueGxvXJZW0wv8hNYWsttRajy9-FVrKx/view?usp=sharing")
 with download: st.download_button(label="Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_Analytics_Resume.pdf",mime="application/pdf")
 
 selection = option_menu(
