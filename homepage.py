@@ -21,9 +21,9 @@ st.set_page_config(layout="wide", page_title="Portfolio Website", initial_sideba
 with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title(":green-background[ANANT GUPTA]")
-st.write("A Data Science and Analytics enthusiast looking for opportunities to solve real-world business problems by leveraging programming skills for :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling]. Committed to upskilling and providing actionable insights for data-driven decision making to foster innovation and efficiency.")
+st.write("A solution oriented Data professional skilled in :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling] using tools such as blue-background:[Python], :blue-background[MySQL] and :blue-background[Git] supported by hands-on experience with large datasets, dashboards and projects with strong analytical and critical thinking abilities.")
 with open("Resume.pdf", "rb") as f: pdf_data = f.read()
-mail, download,_ = st.columns([2,3,6]) 
+mail, download,_ = st.columns([1.5,2,8]) 
 with mail: st.link_button(label="Hire Me", url="mailto:anantgupta08460@gmail.com") 
 with download: st.download_button(label="Download Resume", data=pdf_data, file_name="Anant_Gupta_Data_Analytics_Resume.pdf",mime="application/pdf")
 
@@ -38,7 +38,7 @@ with st.sidebar:
     # Profile pic
     pfp=jpg_to_base64("assets/pfp.JPG")
     st.markdown(f"""
-    <img src="data:image/jpeg;base64,{pfp}" style="border-radius: 50%; width: 215px; height: 215px; object-fit: cover; border: 15px solid #b2b2be71;">
+        <img src="data:image/jpeg;base64,{pfp}" style="border-radius: 50%; width: 215px; height: 215px; object-fit: cover; border: 15px solid #b2b2be71;">
     """,
     unsafe_allow_html=True,)
 #------------------------------------------------Contact section------------------------------------------------#
@@ -47,10 +47,6 @@ with st.sidebar:
     telegram=st.columns([1,4])
     with telegram[0]:st.image("assets/telegram.png")
     with telegram[1]:st.write("[@insightful_ishu](https://t.me/insightful_ishu)") 
-
-    #discord=st.columns([1,4])
-    #with discord[0]:st.markdown("![]()") 
-    #with discord[1]:st.write("[@theinsightfinder](https://discord.com/users/1312679030025097269)") 
 
     github=st.columns([1,4])
     with github[0]: st.image("assets/github.png", use_container_width=True)
@@ -76,15 +72,15 @@ if selection=="Skills":
     with tools1[4]: st.image("assets/git.png", use_container_width=True, caption="Git")
 
     tools2= st.columns(5,gap="large")
-    with tools2[0]: st.image("assets/numpy.png", use_container_width=True, caption= "Numpy")
+    with tools2[0]: st.image("assets/jupnotebook.png", use_container_width=True, caption="Jupyter Notebook") 
     with tools2[1]: st.image("assets/pandas.png", use_container_width=True, caption="Pandas")
     with tools2[2]: st.image("assets/matplotlib.png", use_container_width=True, caption="Matplotlib")
-    with tools2[3]: st.image("assets/seaborn.png", use_container_width=True, caption="Seaborn")     
+    with tools2[3]: st.image("assets/numpy.png", use_container_width=True, caption= "Numpy")  
     with tools2[4]: st.image("assets/sklearn.png", use_container_width=True, caption="Scikit-Learn")
 
-    tools3= st.columns(5,gap="large")
-    with tools3[0]: st.image("assets/tensorflow.png", use_container_width=True, caption="Tensorflow")
-    with tools3[1]: st.image("assets/jupnotebook.png", use_container_width=True, caption="Jupyter Notebook")
+    # tools3= st.columns(5,gap="large")
+    # with tools3[0]: st.image("assets/tensorflow.png", use_container_width=True, caption="Tensorflow")
+    # with tools3[1]: st.image("assets/seaborn.png", use_container_width=True, caption="Seaborn")
     
     "---"
 
@@ -102,17 +98,17 @@ if selection=="Skills":
     with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
     with spec2[3]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
 
-    "---"
+    # "---"
 
-    st.header(":red-background[SOFT SKILLS]")
-    soft= st.columns(6)
-    with soft[0]: st.image("assets/solution oriented.png", width=100, caption="Solution oriented")
-    with soft[1]: st.image("assets/presentation.png", caption="Presentation skills")
-    with soft[2]: st.image("assets/adaptability.png", width=100, caption="Adaptability")
-    with soft[3]: st.image("assets/critical.png", width=100, caption="Critical thinking")
-    with soft[4]: st.image("assets/collab.png", width=100, caption="Collaboration" )
-    with soft[5]: st.image("assets/second_order_thinking.png", width=100, caption="Second Order Thinking")
-    "---"
+    # st.header(":red-background[SOFT SKILLS]")
+    # soft= st.columns(6)
+    # with soft[0]: st.image("assets/solution oriented.png", width=100, caption="Solution oriented")
+    # with soft[1]: st.image("assets/presentation.png", caption="Presentation skills")
+    # with soft[2]: st.image("assets/adaptability.png", width=100, caption="Adaptability")
+    # with soft[3]: st.image("assets/critical.png", width=100, caption="Critical thinking")
+    # with soft[4]: st.image("assets/collab.png", width=100, caption="Collaboration" )
+    # with soft[5]: st.image("assets/second_order_thinking.png", width=100, caption="Second Order Thinking")
+    # "---"
 
 #------------------------------------Educations and Certifications---------------------------------------------------#
 
@@ -201,8 +197,20 @@ if selection=="Education":
 #------------------------------Experience and Achievements---------------------------------------------#
 
 if selection == "Experience":
-    st.header(":blue-background[📊INTERNSHIPS]")
-    st.subheader("Data Science Intern — Tech-A-Intern (Jul 2023 – Aug 2023)")
+    st.header(":blue-background[📊PROFESSIONAL EXPERIENCE]")
+
+    st.subheader("Associate Analyst — GlobalLogic Technologies Private Limited (January 2026 – Present)")
+    gtpl=st.columns([1.75,5])
+    with gtpl[0]:
+        st.image("https://pbs.twimg.com/profile_images/1898902692686118913/mZ-HyOMc_400x400.png")
+    with gtpl[1]:
+        st.markdown("""
+        - Cleaned, modified and analysed large datasets to support AI/ML model development 
+        - Delivered insights while ensuring accuracy and comprehensibility.
+        - Worked with Google as a client.
+        """)
+    
+    st.subheader("Data Science Intern — Tech-A-Intern (July 2023 – August 2023)")
     taiintern=st.columns([1.75,5])
     with taiintern[0]:
         st.image("assets/taiintern.JPG")
@@ -213,7 +221,7 @@ if selection == "Experience":
         - Built **Multiple Linear Regression** models to predict housing prices based on **rooms, bathrooms, furnishing, storage area, parking area, and address**.
         """)
 
-    st.subheader("Data Science Intern — ICT Academy (Aug 2023 – Oct 2023)")
+    st.subheader("Data Science Intern — ICT Academy (August 2023 – October 2023)")
     ictintern=st.columns([1.75,5])
     with ictintern[0]:
         st.image("assets/ictintern.JPG")
