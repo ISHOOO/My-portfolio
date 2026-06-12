@@ -21,7 +21,7 @@ st.set_page_config(layout="wide", page_title="Portfolio Website", initial_sideba
 with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title(":green-background[ANANT GUPTA]")
-st.write("A solution oriented Data professional skilled in :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling] using tools such as blue-background:[Python], :blue-background[MySQL] and :blue-background[Git] supported by hands-on experience with large datasets, dashboards and projects with strong analytical and critical thinking abilities.")
+st.write("A solution oriented Data professional skilled in :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling] using tools such as :blue-background[Python], :blue-background[MySQL] and :blue-background[Git] supported by hands-on experience with large datasets, dashboards and projects with strong analytical and critical thinking abilities.")
 with open("Resume.pdf", "rb") as f: pdf_data = f.read()
 mail, download,_ = st.columns([1.5,2,8]) 
 with mail: st.link_button(label="Hire Me", url="mailto:anantgupta08460@gmail.com") 
@@ -90,13 +90,13 @@ if selection=="Skills":
     with spec1[0]: st.image("assets/data wrangling.png", use_container_width=True, caption="Data Wrangling")
     with spec1[1]: st.image("assets/eda.png",  use_container_width=True, caption="Exploratory Data Analysis")
     with spec1[2]: st.image("assets/dbms.png",  use_container_width=True, caption="Database Management")
-    with spec1[3]: st.image("assets/kpi.png", use_container_width=True, caption="KPIs and Metrics")
+    # with spec1[3]: st.image("assets/kpi.png", use_container_width=True, caption="KPIs and Metrics")
 
     spec2=st.columns(4, gap="large")
     with spec2[0]: st.image("assets/data_viz.png", use_container_width=True, caption="Data visualisation")
     with spec2[1]: st.image("assets/ML.png", use_container_width=True, caption="Machine Learning")
-    with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
-    with spec2[3]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
+    # with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
+    with spec2[2]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
 
     # "---"
 
@@ -205,9 +205,9 @@ if selection == "Experience":
         st.image("https://pbs.twimg.com/profile_images/1898902692686118913/mZ-HyOMc_400x400.png")
     with gtpl[1]:
         st.markdown("""
-        - Cleaned, modified and analysed large datasets to support AI/ML model development 
-        - Delivered insights while ensuring accuracy and comprehensibility.
-        - Worked with Google as a client.
+            - Cleaned, modified and analysed **large datasets** to support AI/ML model development 
+            - Delivered insights through **dashboards** and **reports** while ensuring accuracy and comprehensibility.
+            - Worked on projects with **Google** as a client.
         """)
     
     st.subheader("Data Science Intern — Tech-A-Intern (July 2023 – August 2023)")
@@ -217,8 +217,8 @@ if selection == "Experience":
     with taiintern[1]:
         st.markdown("""
         - An enriching endeavour full of mentorship and collaboration.
-        - Analyzed and visualized IMDb dataset focusing on **genre, author, ratings, popularity, release date, country**, etc.
-        - Built **Multiple Linear Regression** models to predict housing prices based on **rooms, bathrooms, furnishing, storage area, parking area, and address**.
+        - Analyzed and visualized **IMDb dataset** focusing on genre, author, ratings, popularity, release date, country etc.
+        - Built **Multiple Linear Regression** models to predict housing prices based on parameters including but not limited to **rooms, bathrooms, furnishing, storage area, parking area, and address**.
         """)
 
     st.subheader("Data Science Intern — ICT Academy (August 2023 – October 2023)")
@@ -228,8 +228,8 @@ if selection == "Experience":
     with ictintern[1]:    
         st.markdown("""
         - Completed a Data Science virtual internship using Open Weaver Studio.
-        - Built **Sentisense**, a sentiment analysis app for classifying customer feedback and performing **Named Entity Recognition (NER)**.
-        - Created **collaborative filtering-based recommendation systems** as part of the capstone project.
+        - Built **Sentisense**, a sentiment analysis app for classifying customer feedback and performing Named Entity Recognition (NER).
+        - Created **collaborative-filtering based recommendation systems** as part of the capstone project.
         """)
     
     "---"
