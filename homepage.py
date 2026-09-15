@@ -21,7 +21,8 @@ st.set_page_config(layout="wide", page_title="Portfolio Website", initial_sideba
 with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title(":green-background[ANANT GUPTA]")
-st.write("A solution oriented Data professional skilled in :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling] using tools such as :blue-background[Python], :blue-background[MySQL] and :blue-background[Git] supported by hands-on experience with large datasets, dashboards and projects with strong analytical and critical thinking abilities.")
+st.write("A Data science and analytics enthusiast dedicated to extract and deliver business insights through operations ranging from querying and cleaning data to creating dashboards and deploying ML models using tools such as :blue-background [Python], :blue-background[MySQL], :blue-background[Git] and :blue-background[Tableau] supported by hands-on experience with large datasets, dashboards and projects. Currently serving as an Associate analyst where I work on high impact projects to collect, label, validate, preprocess and evaluate large multi-format datasets to train Physical AI and Generative AI.")
+# st.write("A solution oriented Data professional skilled in :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling] using tools such as :blue-background[Python], :blue-background[MySQL] and :blue-background[Git] supported by hands-on experience with large datasets, dashboards and projects with strong analytical and critical thinking abilities.")
 with open("Resume.pdf", "rb") as f: pdf_data = f.read()
 mail, download,_ = st.columns([1.5,2,8]) 
 with mail: st.link_button(label="Hire Me", url="mailto:anantgupta08460@gmail.com") 
@@ -90,12 +91,12 @@ if selection=="Skills":
     with spec1[0]: st.image("assets/data wrangling.png", use_container_width=True, caption="Data Wrangling")
     with spec1[1]: st.image("assets/eda.png",  use_container_width=True, caption="Exploratory Data Analysis")
     with spec1[2]: st.image("assets/dbms.png",  use_container_width=True, caption="Database Management")
-    # with spec1[3]: st.image("assets/kpi.png", use_container_width=True, caption="KPIs and Metrics")
+    with spec1[3]: st.image("assets/kpi.png", use_container_width=True, caption="KPIs and Metrics")
 
     spec2=st.columns(4, gap="large")
     with spec2[0]: st.image("assets/data_viz.png", use_container_width=True, caption="Data visualisation")
     with spec2[1]: st.image("assets/ML.png", use_container_width=True, caption="Machine Learning")
-    # with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
+    with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
     with spec2[2]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
 
     # "---"
@@ -205,20 +206,25 @@ if selection == "Experience":
         st.image("https://pbs.twimg.com/profile_images/1898902692686118913/mZ-HyOMc_400x400.png")
     with gtpl[1]:
         st.markdown("""
-            - Cleaned, modified and analysed **large datasets** to support AI/ML model development 
-            - Delivered insights through **dashboards** and **reports** while ensuring accuracy and comprehensibility.
-            - Worked on projects with **Google** as a client.
+            Operating within a scaled Machine Learning Data Operations framework, I curate, evaluate, and optimize high-fidelity datasets used to train advanced Artificial Intelligence, Generative AI, and Robotics models. My role focuses heavily on data quality assurance, ground-truth dataset engineering, and human-in-the-loop validation across multi-format data assets (Image, Video, Text, and Audio).
+            - Robotics & Computer Vision Training: Engineered precise, step-by-step video data annotations and structured operational instruction sequences. This high-quality data architecture serves as the behavioral baseline for training advanced computer vision and autonomous automation models.
+            - Generative AI & Synthetic Asset Quality Assurance: Conducted extensive multi-image qualitative analysis, benchmarking model-generated assets against source inputs. Specialized in detecting structural anomalies, rendering defects, and adversarial inconsistencies to audit the fidelity and realism of synthetic media.
+            - Multi-Format Data Auditing: Validated complex text, image, audio, and video inputs to minimize algorithmic bias, eliminate dataset noise, and ensure optimal training preparation for downstream deep learning models.
+            - Cross-Functional Compliance: Collaborated under rigorous quality benchmarks to deliver machine-learning-ready datasets that meet strict global corporate standards for AI data security and precision.
         """)
     
-    st.subheader("Data Science Intern — Tech-A-Intern (July 2023 – August 2023)")
+    st.subheader("Data Science Intern — ThinkINK AI (July 2023 – August 2023)")
     taiintern=st.columns([1.75,5])
     with taiintern[0]:
         st.image("assets/taiintern.JPG")
     with taiintern[1]:
         st.markdown("""
-        - An enriching endeavour full of mentorship and collaboration.
-        - Analyzed and visualized **IMDb dataset** focusing on genre, author, ratings, popularity, release date, country etc.
-        - Built **Multiple Linear Regression** models to predict housing prices based on parameters including but not limited to **rooms, bathrooms, furnishing, storage area, parking area, and address**.
+        Worked on data analysis and predictive modelling projects covering exploratory data analysis, data visualization, and regression based machine learning, while collaborating closely with mentors throughout the internship.
+        - Analyzed and visualized the IMDb dataset across features such as genre, cast, ratings, popularity, release date, and country to uncover trends in film performance and audience reception
+        - Built multiple linear regression models to predict housing prices based on features including number of rooms, bathrooms, furnishing status, storage area, parking area, and address
+        - Performed data cleaning, feature selection, and exploratory data analysis using Python to prepare datasets for modelling
+        - Queried and managed structured data using MySQL to support the analysis workflow
+        - Strengthened core skills in regression modelling, feature engineering, and data storytelling through hands on project work
         """)
 
     st.subheader("Data Science Intern — ICT Academy (August 2023 – October 2023)")
@@ -227,9 +233,12 @@ if selection == "Experience":
         st.image("assets/ictintern.JPG")
     with ictintern[1]:    
         st.markdown("""
-        - Completed a Data Science virtual internship using Open Weaver Studio.
-        - Built **Sentisense**, a sentiment analysis app for classifying customer feedback and performing Named Entity Recognition (NER).
-        - Created **collaborative-filtering based recommendation systems** as part of the capstone project.
+        Worked on a capstone project using the Open Weaver Studio platform, applying Python based machine learning and natural language processing techniques to solve real business problems around customer feedback analysis.
+        - Built Sentisense, a sentiment analysis application that classifies customer reviews into sentiment categories using Natural Language Processing techniques
+        - Implemented Named Entity Recognition (NER) within the application to extract and identify key entities from customer feedback text
+        - Designed and built recommendation engines using collaborative filtering techniques to model user preferences and generate relevant suggestions
+        - Applied Python libraries including Pandas, NumPy, Matplotlib, and Scikit-learn for data preprocessing, analysis, and model building throughout the project
+        - Gained hands on experience translating a business problem, understanding customer sentiment, into a working end to end data science application
         """)
     
     "---"
