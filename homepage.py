@@ -22,7 +22,6 @@ with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_a
 
 st.title(":green-background[ANANT GUPTA]")
 st.write("A Data science and analytics enthusiast dedicated to extract and deliver business insights through operations ranging from querying and cleaning data to creating dashboards and deploying ML models using tools such as :blue-background[Python], :blue-background[MySQL], :blue-background[Git] and :blue-background[Tableau] supported by hands-on experience with large datasets, dashboards and projects. Currently serving as an Associate analyst where I work on high impact projects to collect, label, validate, preprocess and evaluate large multi-format datasets to train Physical AI and Generative AI.")
-# st.write("A solution oriented Data professional skilled in :orange-background[Statistical Analysis], :orange-background[Graphical Visualization], :orange-background[Database management] and :orange-background[Predictive Modelling] using tools such as :blue-background[Python], :blue-background[MySQL] and :blue-background[Git] supported by hands-on experience with large datasets, dashboards and projects with strong analytical and critical thinking abilities.")
 with open("Resume.pdf", "rb") as f: pdf_data = f.read()
 mail, download,_ = st.columns([1.5,2,8]) 
 with mail: st.link_button(label="Hire Me", url="mailto:anantgupta08460@gmail.com") 
@@ -97,7 +96,7 @@ if selection=="Skills":
     with spec2[0]: st.image("assets/data_viz.png", use_container_width=True, caption="Data visualisation")
     with spec2[1]: st.image("assets/ML.png", use_container_width=True, caption="Machine Learning")
     with spec2[2]: st.image("assets/AB_testing.png", use_container_width=True, caption="A/B Testing")
-    with spec2[2]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
+    with spec2[3]: st.image("assets/time_series.png", use_container_width=True, caption="Time Series Analysis")
 
     # "---"
 
