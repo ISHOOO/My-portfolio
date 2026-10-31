@@ -36,11 +36,11 @@ selection = option_menu(
 
 with st.sidebar:
     # Profile pic
-    pfp=jpg_to_base64("assets/pfp.JPG")
+    pfp=jpg_to_base64("assets/pfp.jpeg")
     st.markdown(f"""
         <img src="data:image/jpeg;base64,{pfp}" style="border-radius: 50%; width: 215px; height: 215px; object-fit: cover; border: 15px solid #b2b2be71;">
     """,
-    unsafe_allow_html=True,)
+    unsafe_allow_html=True)
 #------------------------------------------------Contact section------------------------------------------------#
 
     st.title("Contact Me:")
